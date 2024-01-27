@@ -50,21 +50,6 @@ header {
         color: #007bff;
         margin-top: 5px;
     }
-    .add-to-cart {
-      background-color: rgb(0, 0, 0);
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 8px 16px;
-      transition: background-color 0.5s ease;
-    }
-  
-    .add-to-cart:hover {
-      background-color: #f0e68c; /* Cambia el color al pasar el ratón por encima */
-    }
-  
-    .add-to-cart.clicked {
-      background-color: #ffd700; /* Color al hacer clic */
-    }
 }
 
 // footer{
