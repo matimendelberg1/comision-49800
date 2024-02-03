@@ -4,10 +4,21 @@
   box-sizing: border-box; }
 
 header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   background: linear-gradient(to right, #4e54c8, #23255a);
   color: white;
   padding: 1rem;
   text-align: center; }
+
+header section{
+  padding-left: 25rem;
+}
+#carrito{
+  width: 6.25rem;
+  height: 6.25rem;
+}
 
 .titulo {
   font-size: 2rem; }
@@ -38,6 +49,11 @@ header {
   .grid h4 {
     color: #007bff;
     margin-top: 5px; }
+
+.contenedor{
+  display: grid;
+  background-color: #f5ede3;
+}
 
 footer {
   display: flex;
