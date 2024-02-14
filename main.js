@@ -1,8 +1,40 @@
+//librerias
+import Swal from "sweetalert2";
+
+
+
+
+//publicidad asincronica cada 4 min
+Swal.fire({
+    title: "Espacio Publicitario",
+    icon: "info",
+    imageUrl: "./assets/publi-cafe.jpeg",
+    imageHeight: "600px",
+    confirmButtonText: "Cerrar",
+    timer: 8000,
+    timerProgressBar: true,
+})
+let contador = 0
+
+let publicidad = setInterval(() => {
+    contador ++;
+    Swal.fire({
+        title: "Espacio Publicitario",
+        icon: "info",
+        imageUrl: "./assets/publi-cafe.jpeg",
+        imageHeight: "600px",
+        confirmButtonText: "Cerrar",
+        timer: 8000,
+        timerProgressBar: true,
+    })
+}, 240000)
+
 //selectores
 
 const formulario = document.getElementById('formulario');
 const inputBuscar = document.getElementById('inputBuscar');
 const articulosContenedor = document.getElementById('articulosContenedor');
+const agregar = document.querySelector("add-to-cart")
 
 
 //arrays
@@ -74,6 +106,13 @@ document.querySelectorAll('.add-to-cart').forEach((button) => {
         const precio = button.parentElement.querySelector('h4').innerText.slice(1);
 
         const producto = new Producto(nombre, precio);
+        Swal.fire({
+            title: `Agregaste ${producto.nombre} al carrito!`,
+            icon: "success",
+            background: "#DCDCDC",
+            confirmButtonText: "Entendido",
+            confirmButtonColor: "green",
+        })
         productos.push(producto);
         console.log('Productos despues de agregar con botón:', productos);
         mostrarProductos();
